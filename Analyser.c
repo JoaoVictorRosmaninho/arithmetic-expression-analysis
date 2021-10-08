@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "stack.h"
-#include "math.h"
+#include "Stack/stack.h"
+#include "libMath/math.h"
 
 #define SIZE_NUM_MAX 15+1
 enum {DELIMITADOR=1, NUMERO, OPERATOR};
