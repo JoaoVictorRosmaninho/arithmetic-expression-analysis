@@ -17,13 +17,17 @@ typedef enum {
   DIV_INTEGER,
   EXPO,
   OPERAND
-} e_node_type;
+} e_type;
 
+typedef struct {
+  e_type type;
+  char *content;
+} t_token;
 
 
 typedef struct s_node {
-  e_token_type type;
-  char *content;
+  e_type type;
+  int value;
   union {
     struct s_node *left;
     struct s_node *right;
@@ -35,6 +39,11 @@ typedef struct {
   char *curr;
   unsigned char error;
 } t_analyser;
+
+typedef struct {
+  token *current;
+  token *prev;
+} t_parser_context;
 
 #endif
 
